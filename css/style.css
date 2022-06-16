@@ -9803,3 +9803,17 @@ a.jtv-m-logo-img {
 .address-table {
 	padding: 20px;
 }
+
+/* navbar submenu */
+.nav>li:hover .nav {
+	transition: .5s;
+	height: 100% !important;
+}
+
+.nav>li:hover .nav li {
+	display: block !important;
+}
+
+.nav>li:hover .nav li a {
+	display: block !important;
+}

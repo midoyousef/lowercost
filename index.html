@@ -78,7 +78,7 @@
 
 
   <!-- mobile menu -->
-  <div id="mobile-menu">
+  <!-- <div id="mobile-menu">
     <ul>
       <li><a href="index.html" class="home1">Home Pages</a>
 
@@ -262,7 +262,7 @@
       <li><a href="shop_grid.html">Laptop</a></li>
       <li><a href="shop_grid.html">Accessories</a></li>
     </ul>
-  </div>
+  </div> -->
   <!-- end mobile menu -->
   <div id="page">
 
@@ -348,12 +348,13 @@
 
                 <div class="top-search">
                   <div id="search">
-                    <form action="/search" method="POST">
+                    <form>
                       <div class="input-group">
 
-                        <input type="text" class="form-control" value="" placeholder="Enter your search..."
-                          name="keyword">
-                        <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" id="searchinp" class="form-control" placeholder="Enter your search..."
+                          name="search">
+                        <button onclick="searchbtn()" class="btn-search" type="button"><i
+                            class="fa fa-search"></i></button>
                       </div>
                     </form>
                   </div>
@@ -408,7 +409,7 @@
 
               <!-- Shop by category -->
               <div class="mega-menu-category">
-                <ul class="nav">
+                <ul class="nav ">
 
                 </ul>
               </div>
@@ -559,7 +560,11 @@
         </div>
       </div>
     </div>
+
+
+
     <!-- offers -->
+
     <div class="container">
       <div class="row">
         <div class="col-sm-12  jtv-best-sale special-pro">
@@ -645,216 +650,46 @@
                 العروض
               </a>
             </h2>
-
-
           </div>
           <div id="productTabContent" class="tab-content">
-            <div class="tab-pane active in">
-              <div class="featured-pro">
-                <div class="slider-items-products">
-                  <div id="computer-slider" class="product-flexslider hidden-buttons">
-                    <div class="slider-items slider-width-col4">
+            <div id="the-offers" class="swiper mySwiper">
+              <div class="swiper-wrapper">
 
-                      <div class=" product-item">
-                        <div class="item-inner">
-                          <div class="product-thumbnail">
-                            <div class="pr-img-area"> <a title="زيت عافيه" href="/product-1052">
-                                <object class="product-img"
-                                  data="http://aaaserver-001-site31.ftempurl.com/Uploads/Products/1052.jpg?q=-8585467235452794721 ">
-                                  <img class="first-img product-img" src="images/placeholder.png " alt="زيت عافيه">
-                                </object>
-                              </a> </div>
-                            <div class="pr-info-area">
-                              <div class="pr-button">
-                                <form action="/like/1052" method="POST">
-                                  <div class="mt-button add_to_wishlist">
-                                    <button type="submit">
-
-                                      <i class="fa fa-heart-o"></i>
-
-                                    </button>
-                                  </div>
-                                </form>
-
-
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item-info">
-                            <div class="info-inner">
-                              <div class="item-title"> <a title="زيت عافيه" href="/product-1052">
-                                  زيت عافيه
-                                </a>
-                              </div>
-                              <div class="item-content">
-
-                                <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">
-                                        30
-                                      </span>
-                                    </span> </div>
-                                </div>
-                                <div class="pro-action">
-                                  <button type="button" class="add-to-cart" data-id="1052" data-price="30"
-                                    data-name="زيت عافيه"
-                                    data-image="/Uploads/Products/1052.jpg?q=-8585467235452794721">
-                                    الأضافه لعربه التسوق
-                                  </button>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class=" product-item">
-                        <div class="item-inner">
-                          <div class="product-thumbnail">
-                            <div class="pr-img-area"> <a title="زيت عافيه" href="/product-1053">
-                                <object class="product-img"
-                                  data="http://aaaserver-001-site31.ftempurl.com/Uploads/Products/1053.jpg?q=-8585467235452790319 ">
-                                  <img class="first-img product-img" src="images/placeholder.png " alt="زيت عافيه">
-                                </object>
-                              </a> </div>
-                            <div class="pr-info-area">
-                              <div class="pr-button">
-                                <form action="/like/1053" method="POST">
-                                  <div class="mt-button add_to_wishlist">
-                                    <button type="submit">
-
-                                      <i class="fa fa-heart-o"></i>
-
-                                    </button>
-                                  </div>
-                                </form>
-
-
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item-info">
-                            <div class="info-inner">
-                              <div class="item-title"> <a title="زيت عافيه" href="/product-1053">
-                                  زيت عافيه
-                                </a>
-                              </div>
-                              <div class="item-content">
-
-                                <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">
-                                        30
-                                      </span>
-                                    </span> </div>
-                                </div>
-                                <div class="pro-action">
-                                  <button type="button" class="add-to-cart" data-id="1053" data-price="30"
-                                    data-name="زيت عافيه"
-                                    data-image="/Uploads/Products/1053.jpg?q=-8585467235452790319">
-                                    الأضافه لعربه التسوق
-                                  </button>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class=" product-item">
-                        <div class="item-inner">
-                          <div class="product-thumbnail">
-                            <div class="pr-img-area"> <a title="زيت عافيه" href="/product-1054">
-                                <object class="product-img"
-                                  data="http://aaaserver-001-site31.ftempurl.com/Uploads/Products/1054.jpg?q=-8585467235452789393 ">
-                                  <img class="first-img product-img" src="images/placeholder.png " alt="زيت عافيه">
-                                </object>
-                              </a> </div>
-                            <div class="pr-info-area">
-                              <div class="pr-button">
-                                <form action="/like/1054" method="POST">
-                                  <div class="mt-button add_to_wishlist">
-                                    <button type="submit">
-
-                                      <i class="fa fa-heart-o"></i>
-
-                                    </button>
-                                  </div>
-                                </form>
-
-
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item-info">
-                            <div class="info-inner">
-                              <div class="item-title"> <a title="زيت عافيه" href="/product-1054">
-                                  زيت عافيه
-                                </a>
-                              </div>
-                              <div class="item-content">
-
-                                <div class="item-price">
-                                  <div class="price-box"> <span class="regular-price"> <span class="price">
-                                        30
-                                      </span>
-                                    </span> </div>
-                                </div>
-                                <div class="pro-action">
-                                  <button type="button" class="add-to-cart" data-id="1054" data-price="30"
-                                    data-name="زيت عافيه"
-                                    data-image="/Uploads/Products/1054.jpg?q=-8585467235452789393">
-                                    الأضافه لعربه التسوق
-                                  </button>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
-
           </div>
+
         </div>
       </div>
-      <!-- Zero Cost -->
-      <div class="container">
-        <div class="home-tab">
-          <div class="tab-title text-left">
-
-            <h2><a href="/zeroCostProducts">
-                بدون تكلفه
-              </a>
-            </h2>
-
-
-          </div>
-          <div id="productTabContent" class="tab-content">
-            <div class="tab-pane active in">
-              <div class="featured-pro">
-                <div class="slider-items-products">
-                  <div id="computer-slider" class="product-flexslider hidden-buttons">
-                    <div class="slider-items slider-width-col4">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
     </div>
+    <!-- Zero Cost -->
+    <div class="container">
+      <div class="home-tab">
+        <div class="tab-title text-left">
+
+          <h2><a href="/zeroCostProducts">
+              بدون تكلفه
+            </a>
+          </h2>
+
+
+        </div>
+        <div id="productTabContent" class="tab-content">
+          <div class="tab-pane active in">
+            <div class="featured-pro">
+              <div class="swiper mySwiper" id="zero-cost">
+                <div class="swiper-wrapper">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
   </div>
   </div>
 
