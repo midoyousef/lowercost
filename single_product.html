@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script type="text/javascript" src="js/jquery.min.js"></script> 
-  <script> 
-    $(function(){
-      $("#top-search-div").load("header.html"); 
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#top-search-div").load("header.html");
     });
-    </script> 
-      <!-- <script> 
+  </script>
+  <!-- <script> 
         $(function(){
           $("#nav-section").load("nav.html"); 
         });
         </script>  -->
-<!-- Basic page needs -->
-<meta charset="utf-8">
-<!--[if IE]>
+  <!-- Basic page needs -->
+  <meta charset="utf-8">
+  <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <![endif]-->
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Product Details</title>
-<meta name="description" content="best template, template free, responsive Template, fashion store, responsive Template, responsive html Template, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template">
-<meta name="keywords" content="bootstrap, ecommerce, fashion, layout, responsive, responsive template, responsive template download, responsive Template, retail, shop, shopping, store, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Product Details</title>
+  <meta name="description"
+    content="best template, template free, responsive Template, fashion store, responsive Template, responsive html Template, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template">
+  <meta name="keywords"
+    content="bootstrap, ecommerce, fashion, layout, responsive, responsive template, responsive template download, responsive Template, retail, shop, shopping, store, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template" />
 
-<!-- Mobile specific metas  -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Mobile specific metas  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Favicon  -->
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!-- CSS Style -->
-<link rel="stylesheet" href="style.css">
+  <!-- Favicon  -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!-- CSS Style -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="product-page" onload=productdetailes();>
-<!--[if lt IE 8]>
+  <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]--> 
+  <![endif]-->
 
-<!-- mobile menu -->
-<div id="mobile-menu">
-  <ul>
-    <li><a href="index.html" class="home1">Home</a>
-      
-    </li>
-    <li id="categ-mob">
-      <!-- <a href="#">Pages</a>
+  <!-- mobile menu -->
+  <div id="mobile-menu">
+    <ul>
+      <li><a href="index.html" class="home1">Home</a>
+
+      </li>
+      <li id="categ-mob">
+        <!-- <a href="#">Pages</a>
       <ul>
         <li ><a href="#">Shop Pages </a>
           <ul>
@@ -85,45 +88,46 @@
           </ul>
         </li>
       </ul> -->
-    </li>
-    <li><a href="blog.html">Brands</a>
-      <ul id="brands-mobile">
-        
-      </ul>
-    </li>
-   
-    <li><a href="shop_grid.html">Shop</a>
-     
-    </li>
+      </li>
+      <li><a href="blog.html">Brands</a>
+        <ul id="brands-mobile">
 
-  </ul>
-</div>
-<!-- end mobile menu -->
-<div id="page"> 
-  
-  <!-- Header -->
-  <header id="top-search-div">
+        </ul>
+      </li>
 
-  </header>
-  <!-- end header -->
-   <!-- end header -->
-   <nav>
-    <div class="container">
-      <div class="row">
-        <div class="mm-toggle-wrap">
-          <div class="mm-toggle"><i class="fa fa-align-justify"></i> </div>
-          <span class="mm-label">All Categories</span> </div>
-        <div class="col-md-3 col-sm-3 mega-container hidden-xs">
-          <div class="navleft-container">
-            <div class="mega-menu-title">
-              <h3><span>All Categories</span></h3>
-            </div>
-            
-            <!-- Shop by category -->
-            <div class="mega-menu-category">
-              <ul class="nav" id="nav-categories">
-               
-<!--                 
+      <li><a href="shop_grid.html">Shop</a>
+
+      </li>
+
+    </ul>
+  </div>
+  <!-- end mobile menu -->
+  <div id="page">
+
+    <!-- Header -->
+    <header id="top-search-div">
+
+    </header>
+    <!-- end header -->
+    <!-- end header -->
+    <nav>
+      <div class="container">
+        <div class="row">
+          <div class="mm-toggle-wrap">
+            <div class="mm-toggle"><i class="fa fa-align-justify"></i> </div>
+            <span class="mm-label">All Categories</span>
+          </div>
+          <div class="col-md-3 col-sm-3 mega-container hidden-xs">
+            <div class="navleft-container">
+              <div class="mega-menu-title">
+                <h3><span>All Categories</span></h3>
+              </div>
+
+              <!-- Shop by category -->
+              <div class="mega-menu-category">
+                <ul class="nav" id="nav-categories">
+
+                  <!--                 
                 <li><a href="#">Supermarket</a>
                   <div class="wrap-popup">
                     <div class="popup">
@@ -754,65 +758,73 @@
                     </div>
                   </div>
                 </li> -->
-				
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-9 jtv-megamenu">
+            <div class="mtmegamenu">
+              <ul class="hidden-xs">
+                <li class="mt-root demo_custom_link_cms">
+                  <div class="mt-root-item"><a href="index.html">
+                      <div class="title title_font"><span class="title-text">Home</span></div>
+                    </a></div>
+
+                </li>
+                <li class="mt-root">
+                  <div class="mt-root-item"><a href="#">
+                      <div class="title title_font"><span class="title-text">brands</span></div>
+                    </a></div>
+                  <ul class="menu-items col-xs-12" id="brands">
+
+                  </ul>
+                </li>
+                <li class="mt-root">
+                  <div class="mt-root-item"><a href="shop_grid.html">
+                      <div class="title title_font"><span class="title-text">About Us</span> </div>
+                    </a></div>
+                </li>
+                <li class="mt-root">
+                  <div class="mt-root-item"><a href="about_us.html">
+                      <div class="title title_font"><span class="title-text">Contact Us</span></div>
+                    </a></div>
+                </li>
+
+
+                <li><a href="#">.</a></li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-md-9 col-sm-9 jtv-megamenu">
-          <div class="mtmegamenu">
-            <ul class="hidden-xs">
-              <li class="mt-root demo_custom_link_cms">
-                <div class="mt-root-item"><a href="index.html">
-                  <div class="title title_font"><span class="title-text">Home</span></div>
-                  </a></div>
-                
-              </li>
-              <li class="mt-root">
-               <div class="mt-root-item"><a href="#">
-                <div class="title title_font"><span class="title-text">brands</span></div>
-                </a></div>
-              <ul class="menu-items col-xs-12" id="brands">
-              
-              </ul>
-              </li>
-              <li class="mt-root">
-                <div class="mt-root-item"><a href="shop_grid.html">
-                  <div class="title title_font"><span class="title-text">About Us</span> </div>
-                  </a></div>
-              </li>
-              <li class="mt-root">
-                <div class="mt-root-item"><a href="about_us.html">
-                  <div class="title title_font"><span class="title-text">Contact Us</span></div>
-                  </a></div>
-              </li>
-              
-              
-              <li><a href="#">.</a></li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </div>
-  </nav>
-  
-  <!-- Slideshow  -->
-  <div class="main-slider" id="home">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-12 banner-left hidden-xs"><img style="height: 35px;
-          width: 100%;"src="images/banner-left.jpg" alt="banner"></div>
-        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12 jtv-slideshow">
-          <div id="jtv-slideshow">
-            <div id='rev_slider_4_wrapper' class='rev_slider_wrapper fullwidthbanner-container' >
-              <div id='rev_slider_4' class='rev_slider fullwidthabanner'>
-                <!-- <ul id="slider-list"> -->
-                  <ul id="slider-list" style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: none;"><li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb=""> <img src="http://aaaserver-001-site31.ftempurl.com/Uploads/Sliders/1006.jpg?q=-8585714250225824836" data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="banner">
-                   
-                  </li> <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb=""> <img src="http://aaaserver-001-site31.ftempurl.com/Uploads/Sliders/1004.jpg?q=-8585714250225823169" data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="banner">
-                   
-                  </li> </ul>     
-                  
+    </nav>
+
+    <!-- Slideshow  -->
+    <div class="main-slider" id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-12 banner-left hidden-xs"><img style="height: 35px;
+          width: 100%;" src="images/banner-left.jpg" alt="banner"></div>
+          <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12 jtv-slideshow">
+            <div id="jtv-slideshow">
+              <div id='rev_slider_4_wrapper' class='rev_slider_wrapper fullwidthbanner-container'>
+                <div id='rev_slider_4' class='rev_slider fullwidthabanner'>
+                  <!-- <ul id="slider-list"> -->
+                  <ul id="slider-list"
+                    style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: none;">
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb=""> <img
+                        src="http://aaaserver-001-site31.ftempurl.com/Uploads/Sliders/1006.jpg?q=-8585714250225824836"
+                        data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="banner">
+
+                    </li>
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-thumb=""> <img
+                        src="http://aaaserver-001-site31.ftempurl.com/Uploads/Sliders/1004.jpg?q=-8585714250225823169"
+                        data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="banner">
+
+                    </li>
+                  </ul>
+
                   <!-- <li data-transition='fade' data-slotamount='7' data-masterspeed='1000' data-thumb=''><img src='images/slider/slide-2.jpg' data-bgposition='left top' data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
                     <div class="caption-inner">
                       <div class='tp-caption LargeTitle sft  tp-resizeme' data-x='350'  data-y='100'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3; white-space:nowrap;'>It�s Time To Look</div>
@@ -822,57 +834,58 @@
                       <div class='tp-caption sfb  tp-resizeme ' data-x='375'  data-y='290'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4; white-space:nowrap;'><a href='#' class="buy-btn">Start Buying </a> </div>
                     </div>
                   </li> -->
-                <!-- </ul> -->
-                <div class="tp-bannertimer"></div>
+                  <!-- </ul> -->
+                  <div class="tp-bannertimer"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Breadcrumbs -->
-  
-  <div class="breadcrumbs">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <ul>
-            <li class="home"> <a title="Go to Home Page" href="index.html">Home</a><span>&raquo;</span></li>
-            <li><strong>Product Details</strong></li>
-          </ul>
+    <!-- Breadcrumbs -->
+
+    <div class="breadcrumbs">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul>
+              <li class="home"> <a title="Go to Home Page" href="index.html">Home</a><span>&raquo;</span></li>
+              <li><strong>Product Details</strong></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Breadcrumbs End --> 
-  <!-- Main Container -->
-  <div class="main-container col1-layout">
-    <div class="container">
-      <div class="row">
-        <div class="col-main" id="productDet">
-        
-        </div>
-      
-        <div class="product-overview-tab">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="product-tab-inner">
-                  <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
-                    <li class="active"> <a href="#description" data-toggle="tab"> Prices By Brand </a> </li>
-                    
-                  </ul>
+    <!-- Breadcrumbs End -->
+    <!-- Main Container -->
+    <div class="main-container col1-layout">
+      <div class="container">
+        <div class="row">
+          <div class="col-main" id="productDet">
 
-                  <div id="productTabContent" class="tab-content">
-                   <div class="container">
-                     <div class="row" id="prices">
-                     
-                     </div>
+          </div>
 
-                   </div>
+          <div class="product-overview-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="product-tab-inner">
+                    <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
+                      <li class="active"> <a href="#description" data-toggle="tab"> Prices By Brand </a> </li>
 
-                  
+                    </ul>
+
+                    <div id="productTabContent" class="tab-content">
+                      <div class="container">
+                        <div class="row" id="prices">
+
+                        </div>
+
+                      </div>
+
+
+                    </div>
                   </div>
                 </div>
               </div>
@@ -881,24 +894,23 @@
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Main Container End --> 
-  
-  <!-- Related Product Slider -->
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="related-product-area">
-          <div class="page-header">
-            <h2>Related Products</h2>
-          </div>
-          <div class="related-products-pro">
-            <div class="slider-items-products">
-              <div id="related-product-slider" class="product-flexslider hidden-buttons">
-                <div class="slider-items slider-width-col4 fadeInUp" id="recommended">
-                  <!-- <div class="product-item">
+
+    <!-- Main Container End -->
+
+    <!-- Related Product Slider -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="related-product-area">
+            <div class="page-header">
+              <h2>Related Products</h2>
+            </div>
+            <div class="related-products-pro">
+              <div class="slider-items-products">
+                <div id="related-product-slider" class="product-flexslider hidden-buttons">
+                  <div class="slider-items slider-width-col4 fadeInUp" id="recommended">
+                    <!-- <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
                         <div class="pr-img-area"> <a title="Product title here" href="single_product.html">
@@ -1149,6 +1161,7 @@
                       </div>
                     </div>
                   </div> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -1156,11 +1169,10 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- Related Product Slider End --> 
-  
-  <!-- Upsell Product Slider -->
-  <!-- <section class="upsell-product-area">
+    <!-- Related Product Slider End -->
+
+    <!-- Upsell Product Slider -->
+    <!-- <section class="upsell-product-area">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -1368,9 +1380,9 @@
       </div>
     </div>
   </section> -->
-  <!-- Upsell Product Slider End --> 
-  <!-- service section -->
-  <!-- <div class="jtv-service-area">
+    <!-- Upsell Product Slider End -->
+    <!-- service section -->
+    <!-- <div class="jtv-service-area">
     <div class="container">
       <div class="row">
         <div class="col col-md-3 col-sm-6 col-xs-12">
@@ -1420,114 +1432,122 @@
       </div>
     </div>
   </div> -->
-  <div class="swiper mySwiper container">
-    <div class="swiper-wrapper">
+    <div class="swiper mySwiper container">
+      <div class="swiper-wrapper">
 
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-  <!-- Footer -->
-  <footer>
-    <div class="footer-contact">
-      <div class="container">
-        <div class="row">
-          
-          <div class="col-sm-4">
-            <div class="footer-contact-item">
-              <div class="footer-contact-icon"> <i class="fa fa-phone"></i> </div>
-              <div class="footer-contact-text"> + (800) 0123 456 789 </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-contact">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-4">
+              <div class="footer-contact-item">
+                <div class="footer-contact-icon"> <i class="fa fa-phone"></i> </div>
+                <div class="footer-contact-text"> + (800) 0123 456 789 </div>
+              </div>
             </div>
+
           </div>
-          
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-md-3 col-xs-12">
-          <div class="footer-logo"><a href="index.html"><img src="images/logofinal.png" alt="fotter logo"></a> </div>
-          <p>Lorem Ipsum is simply dummy text of the print and typesetting industry. Ut pharetra augue nec augue. Nam elit agna, endrerit sit amet.</p>
-          <div class="social">
-            <ul class="inline-mode">
-              <li class="social-network fb"><a title="Connect us on Facebook" target="_blank" href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-              <li class="social-network googleplus"><a title="Connect us on Google+" target="_blank" href="https://plus.google.com"><i class="fa fa-google"></i></a></li>
-              <li class="social-network tw"><a title="Connect us on Twitter" target="_blank" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-              <li class="social-network linkedin"><a title="Connect us on Pinterest" target="_blank" href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a></li>
-              <li class="social-network rss"><a title="Connect us on Instagram" target="_blank" href="https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-2 col-xs-12 collapsed-block">
-          <div class="footer-links">
-            <h3 class="links-title">Information<a class="expander visible-xs" href="#TabBlock-1">+</a></h3>
-            <div class="tabBlock" id="TabBlock-1">
-              <ul class="list-links list-unstyled">
-                <li><a href="#s">Delivery Information</a></li>
-                <li><a href="#">Discount</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <li><a href="#">Terms &amp; Condition</a></li>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 col-xs-12">
+            <div class="footer-logo"><a href="index.html"><img src="images/logofinal.png" alt="fotter logo"></a> </div>
+            <p>Lorem Ipsum is simply dummy text of the print and typesetting industry. Ut pharetra augue nec augue. Nam
+              elit agna, endrerit sit amet.</p>
+            <div class="social">
+              <ul class="inline-mode">
+                <li class="social-network fb"><a title="Connect us on Facebook" target="_blank"
+                    href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                <li class="social-network googleplus"><a title="Connect us on Google+" target="_blank"
+                    href="https://plus.google.com"><i class="fa fa-google"></i></a></li>
+                <li class="social-network tw"><a title="Connect us on Twitter" target="_blank"
+                    href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                <li class="social-network linkedin"><a title="Connect us on Pinterest" target="_blank"
+                    href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a></li>
+                <li class="social-network rss"><a title="Connect us on Instagram" target="_blank"
+                    href="https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
               </ul>
             </div>
           </div>
-        </div>
-        <div class="col-sm-3 col-md-2 col-xs-12 collapsed-block">
-          <div class="footer-links">
-            <h3 class="links-title">Insider<a class="expander visible-xs" href="#TabBlock-3">+</a></h3>
-            <div class="tabBlock" id="TabBlock-3">
-              <ul class="list-links list-unstyled">
-                <li><a href="sitemap.html"> Sites Map </a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Trends</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
-                <li><a href="#">My Orders</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-md-2 col-xs-12 collapsed-block">
-          <div class="footer-links">
-            <h3 class="links-title">Service<a class="expander visible-xs" href="#TabBlock-4">+</a></h3>
-            <div class="tabBlock" id="TabBlock-4">
-              <ul class="list-links list-unstyled">
-                <li><a href="account_page.html">Account</a></li>
-                <li><a href="wishlist.html">Wishlist</a></li>
-                <li><a href="shopping_cart.html">Shopping Cart</a></li>
-                <li><a href="#">Return Policy</a></li>
-                <li><a href="#">Special</a></li>
-                <li><a href="#">Lookbook</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-xs-12 collapsed-block">
-          <div class="footer-links">
-            <h3 class="links-title">Working hours<a class="expander visible-xs" href="#TabBlock-5">+</a></h3>
-            <div class="tabBlock" id="TabBlock-5">
-              <div class="footer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-              <div class="footer-description"> <b>Monday-Friday:</b> 8.30 a.m. - 5.30 p.m.<br>
-                <b>Saturday:</b> 9.00 a.m. - 2.00 p.m.<br>
-                <b>Sunday:</b> Closed </div>
-              <div class="payment">
-                <ul>
-                  <li><a href="#"><img title="Visa" alt="Visa" src="images/visa.png"></a></li>
-                  <li><a href="#"><img title="Paypal" alt="Paypal" src="images/paypal.png"></a></li>
-                  <li><a href="#"><img title="Discover" alt="Discover" src="images/discover.png"></a></li>
-                  <li><a href="#"><img title="Master Card" alt="Master Card" src="images/master-card.png"></a></li>
+          <div class="col-sm-6 col-md-2 col-xs-12 collapsed-block">
+            <div class="footer-links">
+              <h3 class="links-title">Information<a class="expander visible-xs" href="#TabBlock-1">+</a></h3>
+              <div class="tabBlock" id="TabBlock-1">
+                <ul class="list-links list-unstyled">
+                  <li><a href="#s">Delivery Information</a></li>
+                  <li><a href="#">Discount</a></li>
+                  <li><a href="sitemap.html">Sitemap</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="faq.html">FAQs</a></li>
+                  <li><a href="#">Terms &amp; Condition</a></li>
                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-2 col-xs-12 collapsed-block">
+            <div class="footer-links">
+              <h3 class="links-title">Insider<a class="expander visible-xs" href="#TabBlock-3">+</a></h3>
+              <div class="tabBlock" id="TabBlock-3">
+                <ul class="list-links list-unstyled">
+                  <li><a href="sitemap.html"> Sites Map </a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Trends</a></li>
+                  <li><a href="about_us.html">About Us</a></li>
+                  <li><a href="contact_us.html">Contact Us</a></li>
+                  <li><a href="#">My Orders</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-2 col-xs-12 collapsed-block">
+            <div class="footer-links">
+              <h3 class="links-title">Service<a class="expander visible-xs" href="#TabBlock-4">+</a></h3>
+              <div class="tabBlock" id="TabBlock-4">
+                <ul class="list-links list-unstyled">
+                  <li><a href="account_page.html">Account</a></li>
+                  <li><a href="wishlist.html">Wishlist</a></li>
+                  <li><a href="shopping_cart.html">Shopping Cart</a></li>
+                  <li><a href="#">Return Policy</a></li>
+                  <li><a href="#">Special</a></li>
+                  <li><a href="#">Lookbook</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 col-xs-12 collapsed-block">
+            <div class="footer-links">
+              <h3 class="links-title">Working hours<a class="expander visible-xs" href="#TabBlock-5">+</a></h3>
+              <div class="tabBlock" id="TabBlock-5">
+                <div class="footer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                </div>
+                <div class="footer-description"> <b>Monday-Friday:</b> 8.30 a.m. - 5.30 p.m.<br>
+                  <b>Saturday:</b> 9.00 a.m. - 2.00 p.m.<br>
+                  <b>Sunday:</b> Closed </div>
+                <div class="payment">
+                  <ul>
+                    <li><a href="#"><img title="Visa" alt="Visa" src="images/visa.png"></a></li>
+                    <li><a href="#"><img title="Paypal" alt="Paypal" src="images/paypal.png"></a></li>
+                    <li><a href="#"><img title="Discover" alt="Discover" src="images/discover.png"></a></li>
+                    <li><a href="#"><img title="Master Card" alt="Master Card" src="images/master-card.png"></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer-coppyright">
-      <div class="container">
-        <div class="row">
-        <div class="col-sm-6 col-xs-12 coppyright"> Copyright � 2020 <a href="http://zaid.info/"> Ahmed Zaid </a>. All Rights Reserved. </div>
+      <div class="footer-coppyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12 coppyright"> Copyright � 2020 <a href="http://zaid.info/"> Ahmed Zaid </a>.
+              All Rights Reserved. </div>
             <ul class="footer-company-links">
               <li> <a href="about_us.html">About Aryes</a> </li>
               <li> <a href="#">Careers</a> </li>
@@ -1536,44 +1556,45 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
   </footer>
   <a href="#" id="back-to-top" title="Back to top"><i class="fa fa-angle-up"></i></a> </div>
 
-<!-- End Footer --> 
+  <!-- End Footer -->
 
-<!-- JS --> 
+  <!-- JS -->
 
-<script type="text/javascript" src="js/cart.js"></script>
-<!-- jquery js --> 
-<!-- <script type="text/javascript" src="js/jquery.min.js"></script>  -->
+  <script type="text/javascript" src="js/cart.js"></script>
+  <!-- jquery js -->
+  <!-- <script type="text/javascript" src="js/jquery.min.js"></script>  -->
 
-<!-- bootstrap js --> 
-<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-<!-- owl.carousel.min js --> 
-<!-- flexslider js --> 
-<script type="text/javascript" src="js/jquery.flexslider.js"></script> 
+  <!-- owl.carousel.min js -->
+  <!-- flexslider js -->
+  <script type="text/javascript" src="js/jquery.flexslider.js"></script>
 
-<!-- jquery.mobile-menu js --> 
-<script type="text/javascript" src="js/mobile-menu.js"></script> 
-<script type="text/javascript" src="js/jquery-ui.js"></script> 
-<script type="text/javascript" src="js/owl.carousel.min.js"></script> 
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="js/single-product.js"></script>
-<!--cloud-zoom js --> 
-<script type="text/javascript" src="js/cloud-zoom.js"></script> 
-
-
-
-<!--jquery-ui.min js --> 
+  <!-- jquery.mobile-menu js -->
+  <script type="text/javascript" src="js/mobile-menu.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/single-product.js"></script>
+  <!--cloud-zoom js -->
+  <script type="text/javascript" src="js/cloud-zoom.js"></script>
 
 
-<!-- main js --> 
-<script type="text/javascript" src="js/main.js"></script> 
-<!-- <script type="text/javascript" src="js/global-methods.js"></script>  -->
-<!-- countdown js --> 
-<script type="text/javascript" src="js/countdown.js"></script>
+
+  <!--jquery-ui.min js -->
+
+
+  <!-- main js -->
+  <!-- <script type="text/javascript" src="js/main.js"></script>  -->
+  <!-- <script type="text/javascript" src="js/global-methods.js"></script>  -->
+  <!-- countdown js -->
+  <script type="text/javascript" src="js/countdown.js"></script>
 
 </body>
+
 </html>

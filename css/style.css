@@ -7198,6 +7198,7 @@ button.button.pro-add-to-cart {
 	color: #fff;
 	padding: 7px 22px;
 	border: 1px #f45400 solid;
+	width: 100%;
 }
 
 button.button.pro-add-to-cart:hover {
@@ -9805,15 +9806,15 @@ a.jtv-m-logo-img {
 }
 
 /* navbar submenu */
-.nav>li:hover .nav {
+.nav>li:hover .subcat {
 	transition: .5s;
 	height: 100% !important;
 }
 
-.nav>li:hover .nav li {
+.nav>li:hover .subcat li {
 	display: block !important;
 }
 
-.nav>li:hover .nav li a {
+.nav>li:hover .subcat li a {
 	display: block !important;
 }
