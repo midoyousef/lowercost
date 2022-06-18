@@ -272,7 +272,7 @@
                       </span></a></li>
 
 
-                  <li><a title="login" href="/register"><span>
+                  <li><a title="login" href="/register.html"><span>
                         إنشاء حساب
                       </span></a></li>
 
@@ -476,7 +476,7 @@
             <div class="col-md-3 col-sm-2"></div>
             <div class="col-md-6 col-sm-8">
               <div class="single-input p-bottom50 clearfix">
-                <form action="/register" method="POST">
+                <form action="/register" method="POST" id="form">
                   <div class="row">
                     <div class="col-xs-12">
                       <div class="check-title">
@@ -491,7 +491,7 @@
                         الاسم بالكامل
                       </label>
                       <div class="input-text">
-                        <input type="text" name="fullName" class="form-control" required>
+                        <input type="text" name="fullName" class="form-control" required id="name_register">
                       </div>
                     </div>
                     <div class="col-sm-12" style="margin-top: 10px;">
@@ -499,7 +499,7 @@
                         البريد الألكتروني
                       </label>
                       <div class="input-text">
-                        <input type="text" name="email" class="form-control" required>
+                        <input type="text" name="email" class="form-control" required id="emmail_register">
                       </div>
                     </div>
                     <div class="col-sm-12" style="margin-top: 10px;">
@@ -507,7 +507,7 @@
                         رقم الموبايل
                       </label>
                       <div class="input-text">
-                        <input type="text" name="phone" class="form-control" required>
+                        <input type="text" name="phone" class="form-control" required id="number_register">
                       </div>
                     </div>
                     <div class="col-sm-12" style="margin-top: 10px;">
@@ -515,13 +515,21 @@
                         كلمه السر
                       </label>
                       <div class="input-text">
-                        <input type="password" name="password" class="form-control" required>
+                        <input type="password" name="password" class="form-control" required id="pass_register">
+                      </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 10px;">
+                      <label>
+                        المنطقة
+                      </label>
+                      <div class="input-text">
+                        <input type="number" name="zone" class="form-control" required id="zone_register">
                       </div>
                     </div>
                     <div class="col-xs-12" style="margin-top: 20px;">
 
                       <div class="submit-text">
-                        <button class="button"><i class="fa fa-user"></i>&nbsp; <span>
+                        <button type="submit" class="button"><i class="fa fa-user"></i>&nbsp; <span>
                             إنشاء حساب
                           </span></button>
 
@@ -723,13 +731,64 @@
   <script type="text/javascript" src="js/jquery-ui.js"></script>
 
   <!-- main js -->
-  <script type="text/javascript" src="js/main.js"></script>
+  <!-- <script type="text/javascript" src="js/main.js"></script> -->
 
   <!-- countdown js -->
   <script type="text/javascript" src="js/countdown.js"></script>
 
   <!-- Slider Js -->
   <script type="text/javascript" src="js/revolution-slider.js"></script>
+
+  <!-- account script  -->
+  <script type="text/javascript">
+    var hostname = window.location.origin;
+    var queryString = window.location.search;
+    var lang = "en"
+    var urlParams = new URLSearchParams(queryString);
+    if (urlParams.get('lang')) {
+      lang = urlParams.get('lang')
+    }
+    var form = document.getElementById("form");
+    var name = document.getElementById("name_register").value;
+    var email = document.getElementById("emmail_register").value;
+    var number = document.getElementById("number_register").value;
+    var pass = document.getElementById("pass_register");
+    var zone = parseInt(document.getElementById("zone_register").value);
+    document.querySelector("#form .button").addEventListener('click', function (e) {
+      e.preventDefault();
+      // var cf = document.getElementById("cf_register").value;
+      const reg = "http://aaaserver-001-site31.ftempurl.com/" + lang + "/api/Auth/Register";
+      fetch(reg, {
+          method: "POST",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "content-type": "application/json; charset=utf-8"
+          },
+          body: JSON.stringify({
+            fullName: name,
+            email: email,
+            phone: number,
+            zone_Id: zone,
+            password: pass,
+            // fcm: cf,
+
+
+          })
+        }).then((response) => response.json())
+        .then((data) => {
+
+          console.log(data)
+
+          console.log(data.errorMessages)
+          var err = document.getElementById("Regerror")
+          err.innerHTML = "<p>" + data.errorMessages + "</p>"
+          sessionStorage.setItem("fullName", name);
+        }).catch((err) => {
+          console.log(err);
+        })
+
+    })
+  </script>
 
 
 
