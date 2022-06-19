@@ -831,14 +831,16 @@ async function topSellingApi() {
                                 </span> </div>
                             </div>
                             <div class="pro-action">
-                            <button type="button" id="` + e.id + `" onclick="addtoCart(e.id)" class="add-to-cart"><span> Add to Cart</span> </button>
+                            <button type="button" id="${e.id}" onclick="addtoCart(${e.id})" class="add-to-cart"><span> Add to Cart</span> </button>
                             </div>
                             </div>
                         </div>
                         </div>
                     </div>
                     </div>
+                    
         `
+
     })
     let topSell = document.querySelector('#top-selling .swiper-wrapper');
     topSell.innerHTML = mostSellProducts.join("");
@@ -897,7 +899,7 @@ async function ProductsHasDiscount() {
                                 </div>
                             </div>
                             <div class="pro-action">
-                            <button type="button" id="` + e.id + `" onclick="addtoCart(e.id)" class="add-to-cart"><span> Add to Cart</span> </button>
+                            <button type="button" id="` + e.id + `" onclick="addtoCart(${e.id})" class="add-to-cart"><span> Add to Cart</span> </button>
                             </div>
                             </div>
                         </div>
@@ -959,7 +961,7 @@ async function zeroCost() {
                                 </div>
                             </div>
                             <div class="pro-action">
-                            <button type="button" id="` + e.id + `" onclick="addtoCart(e.id)" class="add-to-cart"><span> Add to Cart</span> </button>
+                            <button type="button" id="` + e.id + `" onclick="addtoCart(${e.id})" class="add-to-cart"><span> Add to Cart</span> </button>
                             </div>
                             </div>
                         </div>

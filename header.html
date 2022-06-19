@@ -1,4 +1,3 @@
-{--
 <div class="header-container">
   <div class="header-top">
     <div class="container">
@@ -16,7 +15,7 @@
           <!-- Language &amp; Currency wrapper -->
           <div class="language-currency-wrapper">
             <div class="sorter">
-              <div id="langua" class="short-by">
+              <div id="lang" class="short-by">
               </div>
               <!-- <div class="short-by page">
                   <label>Show:</label>
@@ -139,6 +138,25 @@
     </div>
   </div>
 </div>
+<script>
+  var eng = "http://aaaserver-001-site31.ftempurl.com/en/api/"
+
+  // var eng="http://aaaserver-001-site31.ftempurl.com/en/api/";
+
+  var url = window.location.href.split("?")[0]
+
+  var x = "<a style=margin-right:5px href='" + url + "?lang=en'>English</a> <a href='" + url + "?lang=ar'>Arabic</a>"
+
+  let languageHTML = document.querySelector("#lang");
+  languageHTML.innerHTML = x;
+  var queryString = window.location.search;
+
+  var urlParams = new URLSearchParams(queryString);
+  if (urlParams.get('lang')) {
+
+    eng = "http://aaaserver-001-site31.ftempurl.com/" + urlParams.get('lang') + "/api/"
+  }
+</script>
 <script src="js/apiHeader.js"></script>
 <script src="js/header.js"></script>
 <!-- <script src="js/main.js"></script> -->
@@ -147,5 +165,3 @@
 
 <!-- <script src="js/account.js"></script> -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
-
---}

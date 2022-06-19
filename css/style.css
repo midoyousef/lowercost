@@ -1895,7 +1895,7 @@ ul#cart-sidebar {
 	right: 0;
 	text-align: center;
 	top: 0;
-	width: 100%;
+	width: 90%;
 	z-index: 1;
 }
 
@@ -9817,4 +9817,24 @@ a.jtv-m-logo-img {
 
 .nav>li:hover .subcat li a {
 	display: block !important;
+}
+
+/* cart button delete style  */
+#cartData .th-delate a {
+	padding: 10px;
+	background-color: #f0f0f0;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* add and remove buttons  */
+#cartData .th-price span {
+	margin: 0 6px;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 6px;
+	background-color: #f0f0f0;
+	border-radius: 4px;
+	cursor: pointer;
 }

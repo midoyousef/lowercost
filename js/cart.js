@@ -144,26 +144,33 @@ function displayDataCart() {
       total += z[i].quantity * z[i].price
       console.log(z[i].id)
 
-      productDe += `<tr><td id=` + z[i].id + ` onclick=remove(this.id) class="th-delate"><a>X</a></td>
+      productDe += `<tr>
         <td class="th-product"><a href="#"><img src=` + z[i].image + `" alt="cart"></a></td>
         <td class="th-details"><h2><a href="#">` + z[i].name + `</a></h2></td>
+        <td class="available">Available</td>
         <td class="th-price">` + z[i].price + `</td>
-        <td class="th-price">` + z[i].quantity + `</td>
+        <td class="th-price real"><span class="rem-btn">-</span>` + z[i].quantity + `<span class="add-btn" onclick=incre()>+</span></td>
         <td class="th-price">` + z[i].quantity * z[i].price + `</td>
+        <td id=` + z[i].id + ` onclick=remove(this.id) class="th-delate"><a>X</a></td>
         </tr>
       `;
-      allPrice = `<tr>
-   <td colspan="3"><strong>Total</strong></td>
-   <td colspan="2"><strong>` + total + `</strong></td>
- </tr>`
+      console.log(z[i].quantity);
+
     }
+    allPrice = `<tr>
+   <td colspan="3"><strong>Total Price</strong></td>
+   <td colspan="4"><strong>` + total + `</strong></td>
+ </tr>`
     if (document.getElementById("cartData")) {
       document.getElementById("cartData").innerHTML = productDe;
     }
-    // document.getElementById("Total").innerHTML=allPrice;
+    document.getElementById("Total").innerHTML = allPrice;
   }
 }
 
+// function incre(the_val) {
+//   parent(document.querySelector(".real").textContent) += 1;
+// }
 
 function remove(event) {
 
