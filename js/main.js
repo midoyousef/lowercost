@@ -638,25 +638,27 @@ async function catsApi() {
     const data = await response.json();
 
 
-    // all brands from api 
+    // all cats from api 
     let allCats = data.items;
-
     let catsDomInner = allCats.map((e) => {
-        async function subCatApi() {
-            const res = await fetch("http://aaaserver-001-site31.ftempurl.com/10/api/Categories/GetSubCategories/" + e.id + "")
+        async function catsOnly() {
+            const res = await fetch("http://aaaserver-001-site31.ftempurl.com/en/api/Categories/GetCategories/" + e.id)
             const dt = await res.json();
-            if (dt.items.length !== []) {
-
-                document.querySelector('.subcat').innerHTML = `<li style="display:none">
-                <a href="#" style="display:none"></a>
-              </li>`
+            if (dt.items.length === 0) {
                 console.log('jhjj');
+            } else {
+                const catsDrow = dt.items.map((el) => {
+                    return `<li style="display:none">
+                    <a href="#" style="display:none">${el.name}</a>
+                    </li>`
+                })
+                document.querySelector('.cats').innerHTML = catsDrow.join('');
             }
         }
-        subCatApi();
+        catsOnly();
         return `<li>
         <a class="" href="#">${e.name} </a>
-        <ul class="subcat" style="height: 0;	transition: .5s;
+        <ul class="cats" style="height: 0;	transition: .5s;
         ">
           
         </ul>

@@ -9806,17 +9806,25 @@ a.jtv-m-logo-img {
 }
 
 /* navbar submenu */
-.nav>li:hover .subcat {
+.nav>li:hover .cats {
 	transition: .5s;
 	height: 100% !important;
 }
 
-.nav>li:hover .subcat li {
+.nav>li:hover .cats li {
+	display: block !important;
+	text-align: center;
+	margin: 5px auto;
+	font-size: 16px;
+}
+
+.nav>li:hover .cats li a {
+	color: #999;
 	display: block !important;
 }
 
-.nav>li:hover .subcat li a {
-	display: block !important;
+.nav>li:hover .cats li a:hover {
+	color: #ff9933;
 }
 
 /* cart button delete style  */
