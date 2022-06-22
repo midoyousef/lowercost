@@ -9811,21 +9811,34 @@ a.jtv-m-logo-img {
 	height: 100% !important;
 }
 
-.nav>li:hover .cats li {
+.nav>li:hover .cats a {
 	display: block !important;
 	text-align: center;
 	margin: 5px auto;
 	font-size: 16px;
 }
 
-.nav>li:hover .cats li a {
+.nav>li:hover .cats a {
 	color: #999;
 	display: block !important;
 }
 
-.nav>li:hover .cats li a:hover {
+.nav>li:hover .cats a:hover {
 	color: #ff9933;
 }
+
+.nav>li .cats.open .subcats {
+	display: none !important;
+}
+
+.nav>li .cats.open:hover .subcats {
+	display: block !important;
+	left: 100%;
+	top: 40px;
+	box-shadow: none;
+}
+
+
 
 /* cart button delete style  */
 #cartData .th-delate a {

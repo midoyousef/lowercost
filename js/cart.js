@@ -139,7 +139,7 @@ function displayDataCart() {
   productDe = "";
   var total = 0;
   if (x) {
-    var z = JSON.parse(x)
+    z = JSON.parse(x)
     for (i = 0; i < z.length; i++) {
       total += z[i].quantity * z[i].price
       console.log(z[i].id)
@@ -149,7 +149,7 @@ function displayDataCart() {
         <td class="th-details"><h2><a href="#">` + z[i].name + `</a></h2></td>
         <td class="available">Available</td>
         <td class="th-price">` + z[i].price + `</td>
-        <td class="th-price real"><span class="rem-btn">-</span>` + z[i].quantity + `<span class="add-btn" onclick=incre()>+</span></td>
+        <td class="th-price real"><span class="decre-btn">-</span>` + z[i].quantity + `<span class="incre-btn">+</span></td>
         <td class="th-price">` + z[i].quantity * z[i].price + `</td>
         <td id=` + z[i].id + ` onclick=remove(this.id) class="th-delate"><a>X</a></td>
         </tr>
@@ -157,20 +157,34 @@ function displayDataCart() {
       console.log(z[i].quantity);
 
     }
-    allPrice = `<tr>
+
+  }
+
+
+  allPrice = `<tr>
    <td colspan="3"><strong>Total Price</strong></td>
    <td colspan="4"><strong>` + total + `</strong></td>
  </tr>`
-    if (document.getElementById("cartData")) {
-      document.getElementById("cartData").innerHTML = productDe;
-    }
-    document.getElementById("Total").innerHTML = allPrice;
-  }
-}
 
-// function incre(the_val) {
-//   parent(document.querySelector(".real").textContent) += 1;
+  if (document.getElementById("cartData")) {
+    document.getElementById("cartData").innerHTML = productDe;
+  }
+  document.getElementById("Total").innerHTML = allPrice;
+
+
+}
+// [document.querySelectorAll('.incre-btn')].forEach(item => {
+//   item.addEventListener('click', () => {
+//     console.log('btn');
+//   })
+// })
+
+// function incre() {
+//   z[i].quantity += 1;
+//   console.log(z[i].quantity);
 // }
+
+
 
 function remove(event) {
 

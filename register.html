@@ -491,7 +491,8 @@
                         الاسم بالكامل
                       </label>
                       <div class="input-text">
-                        <input type="text" name="fullName" class="form-control" required id="name_register">
+                        <input type="text" name="fullName" class="form-control register_name" required
+                          id="register_name">
                       </div>
                     </div>
                     <div class="col-sm-12" style="margin-top: 10px;">
@@ -738,7 +739,10 @@
 
   <!-- Slider Js -->
   <script type="text/javascript" src="js/revolution-slider.js"></script>
-
+  <!-- axios script cdn  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+    integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- account script  -->
   <script type="text/javascript">
     var hostname = window.location.origin;
@@ -749,43 +753,106 @@
       lang = urlParams.get('lang')
     }
     var form = document.getElementById("form");
-    var name = document.getElementById("name_register").value;
-    var email = document.getElementById("emmail_register").value;
-    var number = document.getElementById("number_register").value;
+    var regName = document.querySelector(".input-text .register_name");
+    var email = document.getElementById("emmail_register");
+    var phoneNumber = document.getElementById("number_register");
     var pass = document.getElementById("pass_register");
-    var zone = parseInt(document.getElementById("zone_register").value);
-    document.querySelector("#form .button").addEventListener('click', function (e) {
+    var zone = document.getElementById("zone_register");
+    var cf = "";
+
+    document.querySelector("#form").addEventListener('submit', function (e) {
       e.preventDefault();
-      // var cf = document.getElementById("cf_register").value;
-      const reg = "http://aaaserver-001-site31.ftempurl.com/" + lang + "/api/Auth/Register";
-      fetch(reg, {
-          method: "POST",
+      console.log(regName.value);
+      console.log(email.value);
+      console.log(phoneNumber.value);
+      console.log(pass.value);
+      console.log(parseInt(zone.value));
+      console.log("");
+
+      // axios register function 
+      //=======================================================================
+      const registerFunction = () => {
+        axios.post("http://aaaserver-001-site31.ftempurl.com/en/api/Auth/Register", {
+          fullName: regName.value,
+          email: email.value,
+          phone: phoneNumber.value,
+          password: pass.value,
+          zone_Id: parseInt(zone.value),
+          fcm: ""
+        }, {
           headers: {
-            Accept: "application/json, text/plain, */*",
-            "content-type": "application/json; charset=utf-8"
-          },
-          body: JSON.stringify({
-            fullName: name,
-            email: email,
-            phone: number,
-            zone_Id: zone,
-            password: pass,
-            // fcm: cf,
-
-
-          })
-        }).then((response) => response.json())
-        .then((data) => {
-
-          console.log(data)
-
-          console.log(data.errorMessages)
-          var err = document.getElementById("Regerror")
-          err.innerHTML = "<p>" + data.errorMessages + "</p>"
-          sessionStorage.setItem("fullName", name);
-        }).catch((err) => {
+            'Content-Type': 'application/json'
+          }
+        }).then(response => {
+          console.log(response);
+        }).catch(err => {
           console.log(err);
-        })
+        });
+      }
+      registerFunction();
+
+      // async and await to fetch the data 
+      //==============================================================  
+      // (async () => {
+      //   try {
+      //     const rowResponse = await fetch('http://aaaserver-001-site31.ftempurl.com/en/api/Auth/Register', {
+      //       method: 'POST',
+      //       headers: {
+      //         // 'Accept': 'application/json',
+      //         'Content-Type': 'application/json'
+      //       },
+      //       body: JSON.stringify({
+      //         fullName: regName.value,
+      //         email: email.value,
+      //         phone: phoneNumber.value,
+      //         password: pass.value,
+      //         zone_Id: parseInt(zone.value),
+      //         fcm: ""
+      //       })
+      //     });
+      //     if (!rowResponse.ok) {
+      //       throw new Error(`Error! status: ${rowResponse.status}`);
+      //     }
+      //     const content = await rowResponse.json();
+      //     console.log(content);
+
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+
+      // })();
+
+      // normal fetch to post the data 
+      //==================================================
+      // fetch("http://aaaserver-001-site31.ftempurl.com/en/api/Auth/Register", {
+      //     method: "POST",
+      //     headers: {
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify({
+      //       "fullName": regName.value,
+      //       "email": email.value,
+      //       "phone": number.value,
+      //       "password": pass.value,
+      //       "zone_Id": zone.value,
+      //       "fcm": cf,
+      //     }),
+      //   }).then(res => {
+      //     console.log("Request complete! response:", res);
+      //     console.log(res.status);
+      //     res.json()
+      //   })
+      //   .then((data) => {
+      //     console.log('data log');
+      //     console.log(data);
+
+      //     console.log(data.errorMessages);
+      //     var err = document.getElementById("Regerror")
+      //     err.innerHTML = "<p>" + data.errorMessages + "</p>"
+      //     sessionStorage.setItem("fullName", name);
+      //   }).catch((err) => {
+      //     console.log(err);
+      //   })
 
     })
   </script>

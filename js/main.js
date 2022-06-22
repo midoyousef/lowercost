@@ -648,12 +648,31 @@ async function catsApi() {
                 console.log('jhjj');
             } else {
                 const catsDrow = dt.items.map((el) => {
-                    return `<li style="display:none">
-                    <a href="#" style="display:none">${el.name}</a>
-                    </li>`
+                    // fetch the sub cat data 
+                    async function subCatsApi() {
+                        const theRes = await fetch("http://aaaserver-001-site31.ftempurl.com/en/api/Categories/GetSubCategories/" + el.id)
+                        const theData = await theRes.json()
+                        if (theData.items.length !== 0) {
+                            let subCatsDom = theData.items.map((elements) => {
+                                return `<li><a href="#">${elements.name}</a></li>`
+                            })
+                            document.querySelector('.subcats').innerHTML = subCatsDom.join('');
+                        }
+                    }
+                    subCatsApi();
+
+                    return `
+                    <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#" style="display:none">${el.name}</a>
+                    <ul class="dropdown-menu subcats " aria-labelledby="dropdownMenu1">
+                    </ul>`
                 })
                 document.querySelector('.cats').innerHTML = catsDrow.join('');
+
+
             }
+
+
+
         }
         catsOnly();
         return `<li>
