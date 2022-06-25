@@ -325,7 +325,7 @@
 
               </div>
               <div class="col-xs-12 col-sm-4 col-md-3 top-cart">
-                <div class="link-wishlist"> <a href="/wishlist"> <i class="icon-heart icons"></i><span>
+                <div class="link-wishlist"> <a href="/wishlist.html"> <i class="icon-heart icons"></i><span>
                       قائمه الرغبات
                     </span></a>
                 </div>
@@ -481,7 +481,7 @@
     </nav>
 
     <!-- Main Container -->
-    <section class="main-container col2-right-layout">
+    <section class="main-container col2-right-layout" id="Address">
       <div class="main container">
         <div class="row">
           <section class="col-sm-12 col-xs-12">
@@ -501,28 +501,28 @@
                       <div class="inputs px-4 "> <span class="text-uppercase ">
                           شارع
                         </span>
-                        <input type="text" class="form-control" name="street" required>
+                        <input type="text" class="form-control" name="street" required id="street">
                       </div>
                       <div class="row mt-3 g-2">
                         <div class="col-md-4 mt-3">
                           <div class="inputs px-4 mt-3"> <span class="text-uppercase">
                               المبني
                             </span>
-                            <input type="number" class="form-control" name="building" required>
+                            <input type="number" class="form-control" name="building" required id="building">
                           </div>
                         </div>
                         <div class="col-md-4 mt-3">
                           <div class="inputs px-4 mt-3"> <span class="text-uppercase">
                               الطابق
                             </span>
-                            <input type="number" class="form-control" name="floor" required>
+                            <input type="number" class="form-control" name="floor" required id="floor">
                           </div>
                         </div>
                         <div class="col-md-4 mt-3">
                           <div class="inputs px-4 mt-3"> <span class="text-uppercase"></span>
                             الشقه
                             </span>
-                            <input type="number" class="form-control" name="apartment" required>
+                            <input type="number" class="form-control" name="apartment" required id="apartment">
                           </div>
                         </div>
 
@@ -530,12 +530,12 @@
                       <div class="inputs px-4 mt-3"> <span class="text-uppercase">
                           رقم الموبايل
                         </span>
-                        <input type="text" class="form-control" name="phone" required>
+                        <input type="text" class="form-control" name="phone" required id="phone">
                       </div>
                       <div class="inputs px-4 mt-3"> <span class="text-uppercase">
                           الوصف
                         </span>
-                        <input type="text" class="form-control" name="description" required>
+                        <input type="text" class="form-control" name="description" required id="discription">
                       </div>
 
 
@@ -619,19 +619,19 @@
                           <td>
                             اجمالي المبلغ
                           </td>
-                          <td id="total"></td>
+                          <td id="Total"></td>
                         </tr>
                         <tr>
                           <td>
                             مصاريف الشحن
                           </td>
-                          <td>200</td>
+                          <td></td>
                         </tr>
                         <tr>
                           <td>
                             المبلغ الكلي
                           </td>
-                          <td>200</td>
+                          <td></td>
                         </tr>
                       </table>
                     </div>
@@ -818,6 +818,7 @@
 
   <!-- End Footer -->
   <!-- JS -->
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
   <!-- jquery js -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -835,10 +836,9 @@
   <script type="text/javascript" src="js/jquery-ui.js"></script>
 
   <!-- main js -->
-  <script type="text/javascript" src="js/main.js"></script>
 
   <!-- countdown js -->
-  <script type="text/javascript" src="js/countdown.js"></script>
+  <script type="text/javascript" src="js/addAddress.js"></script>
 
   <!-- Slider Js -->
   <script type="text/javascript" src="js/revolution-slider.js"></script>
