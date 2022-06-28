@@ -774,12 +774,13 @@
                 var email_login = document.getElementById("email_login").value;
                 var password_login = document.getElementById("password_login").value;
                 var bodyData = {
-                    "email": "esl@gmail.com",
-                    "password": "12345%$#@!",
+                    "email": email_login,
+                    "password": password_login,
                     "fcm": ""
                 }
                 var fcm_login = "";
                 console.log(email_login)
+                console.log(password_login)
                 fetch("http://aaaserver-001-site31.ftempurl.com/en/api/Auth/Login", {
                         method: 'POST',
                         headers: {

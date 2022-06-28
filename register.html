@@ -476,7 +476,7 @@
             <div class="col-md-3 col-sm-2"></div>
             <div class="col-md-6 col-sm-8">
               <div class="single-input p-bottom50 clearfix">
-                <form action="/register" method="POST" id="form">
+                <form action="/register" method="POST" id="regform">
                   <div class="row">
                     <div class="col-xs-12">
                       <div class="check-title">
@@ -525,6 +525,11 @@
                       </label>
                       <div class="input-text">
                         <input type="number" name="zone" class="form-control" required id="zone_register">
+                      </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 10px;">
+                      <div id="Regerror">
+                        
                       </div>
                     </div>
                     <div class="col-xs-12" style="margin-top: 20px;">
@@ -752,7 +757,7 @@
     if (urlParams.get('lang')) {
       lang = urlParams.get('lang')
     }
-    var form = document.getElementById("form");
+    var form = document.getElementById("regform");
     var regName = document.querySelector(".input-text .register_name");
     var email = document.getElementById("emmail_register");
     var phoneNumber = document.getElementById("number_register");
@@ -760,36 +765,72 @@
     var zone = document.getElementById("zone_register");
     var cf = "";
 
-    document.querySelector("#form").addEventListener('submit', function (e) {
-      e.preventDefault();
+form.addEventListener("submit", function (evt) {
+    evt.preventDefault();
       console.log(regName.value);
       console.log(email.value);
       console.log(phoneNumber.value);
       console.log(pass.value);
       console.log(parseInt(zone.value));
-      console.log("");
+    fetch(
+        "http://aaaserver-001-site31.ftempurl.com/" +
+            lang +
+            "/api/Auth/Register",
+        {
+            method: "POST",
+            body: JSON.stringify({
+                fullName: regName.value,
+                email: email.value,
+                phone: phoneNumber.value,
+                password: pass.value,
+                zone:parseInt(zone.value),
+                fcm: cf,
+            }),
+            headers: {
+                "Content-Type": "application/json;",
+            },
+        }
+    )
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            var err = document.getElementById("Regerror");
+            err.innerHTML = "<p>" + data.errorMessages + "</p>";
+            sessionStorage.setItem("fullName", name);
+        });
+});
+
+// document.querySelector("#form").addEventListener('submit', function (e) {
+//       e.preventDefault();
+//       console.log(regName.value);
+//       console.log(email.value);
+//       console.log(phoneNumber.value);
+//       console.log(pass.value);
+//       console.log(parseInt(zone.value));
+//       console.log("");
 
       // axios register function 
       //=======================================================================
-      const registerFunction = () => {
-        axios.post("http://aaaserver-001-site31.ftempurl.com/en/api/Auth/Register", {
-          fullName: regName.value,
-          email: email.value,
-          phone: phoneNumber.value,
-          password: pass.value,
-          zone_Id: parseInt(zone.value),
-          fcm: ""
-        }, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }).then(response => {
-          console.log(response);
-        }).catch(err => {
-          console.log(err);
-        });
-      }
-      registerFunction();
+      // const registerFunction = () => {
+      //   axios.post("http://aaaserver-001-site31.ftempurl.com/en/api/Auth/Register", {
+      //     fullName: regName.value,
+      //     email: email.value,
+      //     phone: phoneNumber.value,
+      //     password: pass.value,
+      //     zone_Id: parseInt(zone.value),
+      //     fcm: ""
+      //   }, {
+      //     headers: {
+      //       'Content-Type': 'application/json'
+      //     }
+      //   }).then(response => {
+      //     console.log(response);
+      //   }).catch(err => {
+      //     console.log(err);
+      //   });
+      // }
+      // registerFunction();
 
       // async and await to fetch the data 
       //==============================================================  
@@ -854,7 +895,7 @@
       //     console.log(err);
       //   })
 
-    })
+    // })
   </script>
 
 
